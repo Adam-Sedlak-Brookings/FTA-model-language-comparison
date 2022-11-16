@@ -42,13 +42,3 @@ $X \sim 15+\text{Gamma}(\alpha = 3, \beta = 0.25)$ distribution, agents defaults
 
 ### `WattsStrogatzGraph`
 A graph constructed using the Watts–Strogatz algorithm, used as an underlying network for `ABMSocialInfluenceBMI`. Takes the number of nodes in the network (`n`), the mean degree (`k`), and rewiring probability (`beta`).
-
-## Citations
-
-**[1]** Hammond, R. A., &amp; Ornstein, J. T. (2014). A model of social influence on body mass index. Annals of
-the New York Academy of Sciences, 1331(1), 34-42.
-
-**[2]** Watts, D. J.; Strogatz, S. H. (1998). "Collective dynamics of 'small-world' networks" (PDF). Nature. 393 (6684): 440–442.
-
-## Contact
-For questions contact: adamsedlak@berkeley.edu
