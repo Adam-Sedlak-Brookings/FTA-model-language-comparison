@@ -27,7 +27,8 @@ The FTA model was implemented in NetLogo, Python, and Julia comparing performanc
 ## Model Notes
 * Agents.jl
   * Library had a bit of a learning curve but was easy once you knew what you needed
-  * Julia is still pretty new so there are fewer resources and messier docs (e.g., found a typo on the Graphs.jl page)
+  * Julia is still pretty new so there are fewer resources and messier docs (e.g., found a typo on the Graphs.jl page
+   * The [graphs docs](https://docs.juliahub.com/Graphs/VJ6vx/1.4.0/generators/#Graphs.SimpleGraphs.watts_strogatz-Tuple{Integer,%20Integer,%20Real}) say the following which is incorrect (with respect to both the definition and implementation in Julia): "For β = 1, the graph will remain a 1-lattice, and for β = 0, all edges will be rewired randomly"
   * Unicode character support and Pluto made condense and assessable 
 
 * Numpy
