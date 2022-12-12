@@ -15,7 +15,7 @@ This project implements an agent based model, based on the work by Hammond and O
 
 ### Examples
 **Running a AMB**
-
+```python
     from ABMSocialInfluenceBMI import ABMSocialInfluenceBMI
     import numpy as np
 
@@ -24,15 +24,16 @@ This project implements an agent based model, based on the work by Hammond and O
     model = ABMSocialInfluenceBMI(0.4, 0.1)
     # Running model
     final_bmi, intital_bmi, mean_bmi = model.run()
+```
 **Creating a graph/network**
-
-    >>> from WattsStrogatzGraph import WattsStrogatzGraph
+```python
+    from WattsStrogatzGraph import WattsStrogatzGraph
     # Creating a new network with 150 nodes, 4 neighbors, and
     # a rewiring probability 0.15
-    >>> network = WattsStrogatzGraph(150, 4, 0.15)
+    network = WattsStrogatzGraph(150, 4, 0.15)
     # Getting 3rd nodes neighbors (zero indexed)
-    >>> network.get_neighbors(2)
-    
+    network.get_neighbors(2)
+```
     
 ## API Documentation
 
