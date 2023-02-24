@@ -37,6 +37,7 @@ The FTA model was implemented in NetLogo, Python, and Julia comparing performanc
   * Note that this code **technically** doesn't run a FTA model because all agents update their BMIs at the same time. However, the notebook includes a test comparing how this update rule effects the model outcome (interestingly it does not effect the model outcome, although there may be an edge case I have missed).
   * Slower FTA version written in Numpy was written could be speed up with Python JIT.
   * Simultaneous update version of the model was fastest of all models implemented.
+  * Applying numba jit to fastest numpy model got speed down to 2.20ms ± 152 µs!
   
 * Custom
   * There is a lot of code needed for this implementation and a better version can be found in the Numpy implementation.
