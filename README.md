@@ -18,11 +18,13 @@ The FTA model was implemented in NetLogo, Python, and Julia comparing performanc
 | Python (Numpy)    | 9.86 ms ± 601 µs             | 700             | $O(n^2)$*, a=3E-7                     | 9     | No                                   |       |
 | Python (Custom)   | 411ms ± 50ms                 | 30              | $O(n)$, b=4.5E-3                      | 100+  | No                                   |       |
 | Python (Mesa)     | 732ms ± 50ms                 | 30              | $O(n)$, b=7.8E-3                      | 30-40 | Yes, limited docs/ examples          |       |
-| NetLogo           | 500ms - 1000ms               | 150             | $O(n^2)$**, a=2E-5                    | 30-40 | Yes, very easy basically free        |       |
+| NetLogo           | 104ms ± 50ms**               | 1000             | $O(n^2)$***, a=2E-5                    | 30-40 | Yes, very easy basically free        |       |
 
 \* Python (Numpy) can be made to scale linearly with large $n$ by using sparse arrays
 
-\** NetLogo could no longer load models after $n > 5000$
+\** This is for only using one core
+
+\*** NetLogo could no longer load models after $n > 5000$
 
 ## Model Notes
 * Agents.jl
