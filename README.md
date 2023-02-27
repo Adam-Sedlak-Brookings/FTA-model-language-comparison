@@ -14,7 +14,7 @@ The FTA model was implemented in NetLogo, Python, and Julia comparing performanc
 |-------------------|------------------------------|-----------------|-------------------------------------|-------|--------------------------------------|
 | Julia (Agents.jl) | 32ms ± 8.2ms                 | 150             | $O(n)$, b=7E-4                        | 15-20 | Yes, but limited support (as of now) |
 | Julia (Base) | 9.5ms ± 3.1ms                 | 525             | TBD                        | ~15 | No |
-| Python (Numba) | 2.86 ms ± 37µs      | 700             | TBD                     | ~15     | No                                   |       |
+| Python (Numba) | 2.9ms ± 37µs      | 700             | TBD                     | ~15     | No                                   |       |
 | Python (Custom)   | 411ms ± 50ms                 | 30              | $O(n)$, b=4.5E-3                      | 100+  | No                                   |       |
 | Python (Mesa)     | 732ms ± 50ms                 | 30              | $O(n)$, b=7.8E-3                      | 30-40 | Yes, limited docs/ examples          |       |
 | NetLogo           | 104ms ± 50ms**               | 1000             | $O(n^2)$***, a=2E-5                    | 30-40 | Yes, very easy basically free        |       |
