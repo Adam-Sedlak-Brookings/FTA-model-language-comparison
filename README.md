@@ -14,7 +14,7 @@ The FTA model was implemented in NetLogo, Python, and Julia comparing performanc
 |-------------------|------------------------------|-----------------|-------------------------------------|-------|--------------------------------------|
 | Julia (Agents.jl) | 32ms ± 8.2ms                 | 150             | $O(n)$, b=7E-4                        | 15-20 | Yes, but limited support (as of now) |
 | Julia (Base) | 9.5ms ± 3.1ms                 | 525             | TBD                        | ~15 | No |
-| Python (Numba) | 2.9ms ± 37µs      | 700             | TBD                     | ~15     | No                                   |       |
+| Python (Numba + Numpy) | 2.9ms ± 37µs      | 700             | TBD                     | ~15     | No                                   |       |
 | Python (Custom)   | 411ms ± 50ms                 | 30              | $O(n)$, b=4.5E-3                      | 100+  | No                                   |       |
 | Python (Mesa)     | 732ms ± 50ms                 | 30              | $O(n)$, b=7.8E-3                      | 30-40 | Yes, limited docs/ examples          |       |
 | NetLogo           | 104ms ± 50ms**               | 1000             | $O(n^2)$***, a=2E-5                    | 30-40 | Yes, very easy basically free        |       |
@@ -32,11 +32,11 @@ The FTA model was implemented in NetLogo, Python, and Julia comparing performanc
    * The [graphs docs](https://docs.juliahub.com/Graphs/VJ6vx/1.4.0/generators/#Graphs.SimpleGraphs.watts_strogatz-Tuple{Integer,%20Integer,%20Real}) say the following which is incorrect (with respect to both the definition and implementation in Julia): "For β = 1, the graph will remain a 1-lattice, and for β = 0, all edges will be rewired randomly"
   * Unicode character support and Pluto made condense and assessable 
 
-* Numpy
-  * Note that this code **technically** doesn't run a FTA model because all agents update their BMIs at the same time. However, the notebook includes a test comparing how this update rule effects the model outcome (interestingly it does not effect the model outcome, although there may be an edge case I have missed).
-  * Slower FTA version written in Numpy was written could be speed up with Python JIT.
-  * Simultaneous update version of the model was fastest of all models implemented.
-  * Applying numba jit to fastest numpy model got speed down to 2.20ms ± 152 µs!
+* Numba + Numpy
+  * Includes code for the **fastest** FTA model! Uses numpy and numba libraries to achieve high performace code.
+  * Code can take a bit of extra time to write and is a bit harder to read as well.
+  * Notebook has an example of multiprocessing and other FTA model as well.
+  * Code *could* maybe be further optimized by rewritting `watts_strogatz_graph()`
   
 * Custom
   * There is a lot of code needed for this implementation and a better version can be found in the Numpy implementation.
@@ -48,9 +48,8 @@ The FTA model was implemented in NetLogo, Python, and Julia comparing performanc
   * Slowest of all the models implemented
 
 * NetLogo
-  * NetLogo syntax is a bit confusing (e.g., no equals signs).
+  * NetLogo syntax is a bit confusing (e.g., no equals signs or commas).
   * GUI implementation was easy to use and required little additional work
-  * I couldn't figure out how to benchmark NetLogo so these are some rough estimates. My guess is that with multicores and headless state NetLogo performance is quite good
 
 ## Citations
 
